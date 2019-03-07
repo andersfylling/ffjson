@@ -61,7 +61,7 @@ func poolNum(i int) int {
 	}
 }
 
-// Send a buffer to the Pool to reuse for other instances.
+// Pool: Send a buffer to the Pool to reuse for other instances.
 // You may no longer utilize the content of the buffer, since it may be used
 // by other goroutines.
 func Pool(b []byte) {

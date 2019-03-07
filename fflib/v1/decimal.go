@@ -274,7 +274,7 @@ func leftShift(a *decimal, k uint) {
 	trim(a)
 }
 
-// Binary shift left (k > 0) or right (k < 0).
+// Shift: Binary shift left (k > 0) or right (k < 0).
 func (a *decimal) Shift(k int) {
 	switch {
 	case a.nd == 0:
@@ -325,7 +325,7 @@ func (a *decimal) Round(nd int) {
 	}
 }
 
-// Round a down to nd digits (or fewer).
+// RoundDown: Round a down to nd digits (or fewer).
 func (a *decimal) RoundDown(nd int) {
 	if nd < 0 || nd >= a.nd {
 		return
@@ -334,7 +334,7 @@ func (a *decimal) RoundDown(nd int) {
 	trim(a)
 }
 
-// Round a up to nd digits (or fewer).
+// RoundUp: Round a up to nd digits (or fewer).
 func (a *decimal) RoundUp(nd int) {
 	if nd < 0 || nd >= a.nd {
 		return
@@ -357,7 +357,7 @@ func (a *decimal) RoundUp(nd int) {
 	a.dp++
 }
 
-// Extract integer part, rounded appropriately.
+// RoundedInteger: Extract integer part, rounded appropriately.
 // No guarantees about overflow.
 func (a *decimal) RoundedInteger() uint64 {
 	if a.dp > 20 {

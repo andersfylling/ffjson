@@ -35,7 +35,7 @@ func nextSuffix() string {
 	return strconv.Itoa(int(1e9 + r%1e9))[1:]
 }
 
-// TempFile creates a new temporary file in the directory dir
+// TempFileWithPostfix: creates a new temporary file in the directory dir
 // with a name beginning with prefix, opens the file for reading
 // and writing, and returns the resulting *os.File.
 // If dir is the empty string, TempFile uses the default directory

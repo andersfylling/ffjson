@@ -558,7 +558,7 @@ func (ffl *FFLexer) scanField(start FFTok, capture bool) ([]byte, error) {
 	return nil, fmt.Errorf("ffjson: invalid capture type: %v", start)
 }
 
-// Captures an entire field value, including recursive objects,
+// CaptureField captures an entire field value, including recursive objects,
 // and converts them to a []byte suitable to pass to a sub-object's
 // UnmarshalJSON
 func (ffl *FFLexer) CaptureField(start FFTok) ([]byte, error) {
@@ -570,7 +570,7 @@ func (ffl *FFLexer) SkipField(start FFTok) error {
 	return err
 }
 
-// TODO(pquerna): return line number and offset.
+// ToError: TODO(pquerna): return line number and offset.
 func (err FFErr) ToError() error {
 	switch err {
 	case FFErr_e_ok:

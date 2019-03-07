@@ -139,7 +139,7 @@ func fuzzTimeSlice(t *[]time.Time, c fuzz.Continue) {
 	*t = rv
 }
 
-// Test 1000 iterations
+// TestFuzzCycle tests 1000 iterations
 func TestFuzzCycle(t *testing.T) {
 	f := fuzz.New()
 	f.NumElements(0, 50)
@@ -237,7 +237,7 @@ func TestFuzzCycle(t *testing.T) {
 	}
 }
 
-// Test 1000 iterations
+// TestFuzzOmitCycle tests 1000 iterations
 func TestFuzzOmitCycle(t *testing.T) {
 	f := fuzz.New()
 	f.NumElements(0, 10)
@@ -331,7 +331,7 @@ func TestFuzzOmitCycle(t *testing.T) {
 	}
 }
 
-// Test 1000 iterations
+// TestFuzzStringCycle tests 1000 iterations
 func TestFuzzStringCycle(t *testing.T) {
 	ver := runtime.Version()
 	if strings.Contains(ver, "go1.3") || strings.Contains(ver, "go1.2") {
@@ -678,7 +678,7 @@ func TestFuzzTSAString(t *testing.T) {
 	testType(t, &TSAString{}, &XSAString{})
 }
 
-// This contains maps.
+// TestFuzzMapToType: This contains maps.
 // Since map order is random, we can expect the encoding order to be random
 // Therefore we cannot use binary compare.
 func TestFuzzMapToType(t *testing.T) {

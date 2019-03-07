@@ -165,7 +165,7 @@ func TestAnonymousNonstruct(t *testing.T) {
 	}
 }
 
-// Issue 5245.
+// TestEmbeddedBug Issue 5245.
 func TestEmbeddedBug(t *testing.T) {
 	v := BugB{
 		BugA{"A"},
@@ -195,7 +195,7 @@ func TestEmbeddedBug(t *testing.T) {
 	}
 }
 
-// Test that a field with a tag dominates untagged fields.
+// TestTaggedFieldDominates tests that a field with a tag dominates untagged fields.
 func TestTaggedFieldDominates(t *testing.T) {
 	v := BugY{
 		BugA{"BugA"},

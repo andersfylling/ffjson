@@ -610,7 +610,7 @@ func TestEncodeRenamedByteSlice(t *testing.T) {
 	require.Equal(t, string(result), expect)
 }
 
-// Test arrays
+// TestArrayBool tests arrays
 func TestArrayBool(t *testing.T) {
 	testType(t, &ATbool{}, &AXbool{})
 }
@@ -675,7 +675,7 @@ func TestArrayTime(t *testing.T) {
 	testType(t, &ATtime{}, &AXtime{})
 }
 
-// Test slices
+// TestSliceBool tests slices
 func TestSliceBool(t *testing.T) {
 	testType(t, &STbool{}, &SXbool{})
 }
@@ -853,7 +853,7 @@ func TestInlineStructs(t *testing.T) {
 	testCycle(t, &a, &b)
 }
 
-// This tests that we behave the same way as encoding/json.
+// TestDominantField: This tests that we behave the same way as encoding/json.
 // That means that if there is more than one field that has the same name
 // set via the json tag ALL fields with this name are dropped.
 func TestDominantField(t *testing.T) {

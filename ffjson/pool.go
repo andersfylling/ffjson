@@ -21,7 +21,7 @@ import (
 	fflib "github.com/pquerna/ffjson/fflib/v1"
 )
 
-// Send a buffer to the Pool to reuse for other instances.
+// Pool: Send a buffer to the Pool to reuse for other instances.
 //
 // On servers where you have a lot of concurrent encoding going on,
 // you can hand back the byte buffer you get marshalling once you are done using it.

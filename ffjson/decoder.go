@@ -56,7 +56,7 @@ func (d *Decoder) Decode(data []byte, v interface{}) error {
 	return json.Unmarshal(data, v)
 }
 
-// Decode the data from the supplied reader.
+// DecodeReader decodes the data from the supplied reader.
 // You should expect that data is read into memory before it is decoded.
 func (d *Decoder) DecodeReader(r io.Reader, v interface{}) error {
 	_, ok := v.(unmarshalFaster)
