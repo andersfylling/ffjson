@@ -1,4 +1,7 @@
-# ffjson: faster JSON for Go
+# About
+Temporary fork. I hope that changes done here can just be merged into the original repository when it becomes more active again.
+
+# ffjson: faster JSON for Go 
 
 [![Build Status](https://travis-ci.org/pquerna/ffjson.svg?branch=master)](https://travis-ci.org/pquerna/ffjson)
 
