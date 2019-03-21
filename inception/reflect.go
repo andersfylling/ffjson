@@ -273,7 +273,7 @@ func dominantField(fields []*StructField) (*StructField, bool) {
 			if tagged >= 0 {
 				// Multiple tagged fields at the same level: conflict.
 				// Return no field.
-				log.Printf("Warning: Duplicate tagged entry with entry %s found. Ignoring entries.", f.JsonName, f.Typ)
+				log.Printf("Warning: Duplicate tagged entry with entry %s found, type %s. Ignoring entries.", f.JsonName, f.Typ)
 				return nil, false
 			}
 			tagged = i
